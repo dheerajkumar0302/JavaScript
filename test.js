@@ -41,3 +41,44 @@ function add(a, b, c) {
 }
 
 add(2, 5, 7);
+
+const data = [
+  {
+    name: "Dheeraj",
+    age: 25,
+  },
+  {
+    name: "Nitu",
+    age: 20,
+  },
+];
+
+function ageFind(data) {
+  for (let index = 0; index < data.length; index++) {
+    if (data[index].age > 20) console.log(data[index].name);
+  }
+}
+
+ageFind(data);
+
+const userData = [
+  {
+    name: "akash",
+    age: 26,
+  },
+  {
+    name: "vikash",
+    age: 27,
+  },
+  {
+    name: "krishna",
+    age: 30,
+  },
+];
+
+const agesGreaterThan25 = userData
+  .filter((user) => user.age > 25)
+  .map((user) => user.age)
+  .reduce((x, y) => x + y, 0);
+
+console.log(agesGreaterThan25);
